@@ -12,35 +12,73 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
-<body>
-  <select name="machine" onchange="ProphitCalc.machines_select_onchange()"></select>
-  <select name="coin" onchange="ProphitCalc.coins_select_onchange()"></select>
-  <select name="country" onchange="ProphitCalc.country_select_onchange()"></select>
+<body style="background-color: rgb(255, 255, 255);">
 
-  <h5>Hourly Gains</h5>
-  <p id="coin_gain_hourly"></p>
-  <p id="dollar_gain_hourly"></p>
-  <p id="dollar_prophit_hourly"></p>
+ 
+  <div class="card-body mb-2 mr-2">
+  
+    <div class="row mb-5 mr-2">
+        <div class="col-sm-3">
+            <p class="mb-0">Equipment</p>
+            <select name="machine" aria-placeholder="Equipment" onchange="ProphitCalc.machines_select_onchange()"></select>
 
-  <h5>Daily Gains</h5>
-  <p id="coin_gain_daily"></p>
-  <p id="dollar_gain_daily"></p>
-  <p id="dollar_prophit_daily"></p>
+        </div>
+        <div class="col-sm-3 mr-2" style="margin-left: 60px;">
+            <p class="mb-0"> Cryptocurrency </p>
+            <select name="coin" onchange="ProphitCalc.coins_select_onchange()"></select>
 
-  <h5>Weekly Gains</h5>
-  <p id="coin_gain_weekly"></p>
-  <p id="dollar_gain_weekly"></p>
-  <p id="dollar_prophit_weekly"></p>
+        </div>
+        <div class="col-sm-3" style="margin-left: -15px;">
+          <p class="mb-0"> Country </p>
+          <select name="country" onchange="ProphitCalc.country_select_onchange()"></select>
 
-  <h5>Monthly Gains</h5>
-  <p id="coin_gain_monthly"></p>
-  <p id="dollar_gain_monthly"></p>
-  <p id="dollar_prophit_monthly"></p>
+      </div>
 
-  <h5>Yearly Gains</h5>
-  <p id="coin_gain_yearly"></p>
-  <p id="dollar_gain_yearly"></p>
-  <p id="dollar_prophit_yearly"></p>
+    </div>
+  
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Label</th>
+          <th scope="col">Hourly Gains</th>
+          <th scope="col">Daily Gains</th>
+          <th scope="col">Weekly Gains</th>
+          <th scope="col">Monthly Gains</th>
+          <th scope="col">Yearly Gains</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Coin gain </th>
+          <td>  <p id="coin_gain_hourly"></p> </td>
+          <td> <p id="coin_gain_daily"></p> </td>
+          <td>  <p id="coin_gain_weekly"></p> </td>
+          <td>  <p id="coin_gain_monthly"></p> </td>
+          <td>   <p id="coin_gain_yearly"></p></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Dollar gain </th>
+          <td>   <p id="dollar_gain_hourly"></p> </td>
+          <td>   <p id="dollar_gain_daily"></p></td>
+          <td>   <p id="dollar_gain_weekly"></p> </td>
+          <td>   <p id="dollar_gain_monthly"></p></td>
+          <td>    <p id="dollar_gain_yearly"></p>  </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Profit</th>
+          <td>   <p id="dollar_prophit_hourly"></p> </td>
+          <td>   <p id="dollar_prophit_daily"></p></td>
+          <td>   <p id="dollar_prophit_weekly"></p> </td>
+          <td>   <p id="dollar_prophit_monthly"></p></td>
+          <td>    <p id="dollar_prophit_yearly"></p>  </td>
+        </tr>
+      </tbody>
+    </table>
+  
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
